@@ -1,0 +1,1473 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AsNum.XFControls</name>
+    </assembly>
+    <members>
+        <member name="T:AsNum.XFControls.Border">
+            <summary>
+            边框
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Border.CornerRadiusProperty">
+            <summary>
+            圆角大小
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Border.StrokeProperty">
+            <summary>
+            边框颜色
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Border.StrokeThicknessProperty">
+            <summary>
+            边框厚度
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Border.IsClippedToBorderProperty">
+            <summary>
+            是否裁剪超出部分
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Border.CornerRadius">
+            <summary>
+            圆角大小
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Border.Stroke">
+            <summary>
+            边框颜色
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Border.StrokeThickness">
+            <summary>
+            边框宽度
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Border.IsClippedToBorder">
+            <summary>
+            是否裁剪超出部分
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.CheckBox">
+            <summary>
+            复选框(模拟)
+            </summary>
+        </member>
+        <member name="E:AsNum.XFControls.CheckBox.CheckChanged">
+            <summary>
+            选中事件
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.CheckBox.CheckedProperty">
+            <summary>
+            是否选中,默认未选中
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.CheckBox.Checked">
+            <summary>
+            是否选中, 默认未选中
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.CheckBox.ShowLabelProperty">
+            <summary>
+            是否显示标签文本,默认不显示
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.CheckBox.ShowLabel">
+            <summary>
+            是否显示标签文本,默认不显示
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.CheckBox.TextProperty">
+            <summary>
+            标签文本
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.CheckBox.Text">
+            <summary>
+            标签文本
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.CheckBox.SizeProperty">
+            <summary>
+            选择框大小, 默认25, 只控制选择框, 对文本不起作用
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.CheckBox.Size">
+            <summary>
+            选择框大小, 默认25, 只控制选择框, 对文本不起作用
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.CheckBox.CheckChangedCmdProperty">
+            <summary>
+            选中状态变化时触发的命令, 带一个 bool 参数
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.CheckBox.CheckChangedCmd">
+            <summary>
+            选中状态变化时触发的命令, 带一个 bool 参数
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.CheckBox.TapCmd">
+            <summary>
+            内部使用点击命令
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.CircleBox">
+            <summary>
+            园形BOX
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.CircleBox.RadiusProperty">
+            <summary>
+            半径,默认 40
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.CircleBox.Radius">
+            <summary>
+            半径,默认 40
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.Converters.ResImgConverterBase">
+            <summary>
+            <remark>
+            由于GetCallingAssembly返回的是调用处的 Assembly, 
+            在 Xaml 的 Converter 中指定，会返回 Xamarin.Forms 程序集
+            在 Xaml 中也不方便使用 Assembly
+            所以，这里是抽象类，如果需要，需要在使用的地方继承这个类
+            </remark>
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.ImageResourceExtension">
+            <summary>
+            从资源文件中读取图片的 XAML 标记扩展
+            https://developer.xamarin.com/guides/xamarin-forms/working-with/images/#Embedded_Images
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.DataPicker">
+            <summary>
+            数据选择器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.DataPicker.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DataPicker.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.DataPicker.SelectedItemProperty">
+            <summary>
+            选中项
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DataPicker.SelectedItem">
+            <summary>
+            选中项
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DataPicker.DisplayPath">
+            <summary>
+            显示值的属性路径
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DataPicker.DisplayFormat">
+            <summary>
+            显示值的格式
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DataPicker.StringValues">
+            <summary>
+            将数据源转换为可显示文本集合,用于 Render 中的 NativeControl
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DataPicker.SelectedIndex">
+            <summary>
+            选中项的序号
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.RatingBar">
+            <summary>
+            打分条
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RatingBar.IsIndicatorProperty">
+            <summary>
+            是否仅指示,默认 false
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RatingBar.IsIndicator">
+            <summary>
+            是否仅指示,默认 false
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RatingBar.StarCountProperty">
+            <summary>
+            星星数量
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RatingBar.StarCount">
+            <summary>
+            星星数量
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RatingBar.RateProperty">
+            <summary>
+            当前分数
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RatingBar.Rate">
+            <summary>
+            当前分数
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RatingBar.StepProperty">
+            <summary>
+            打分步长,默认1
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RatingBar.Step">
+            <summary>
+            打分步长,默认1
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.Stepper">
+            <summary>
+            Stepper
+            XF 的 Stepper 难看
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Stepper.MinProperty">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Stepper.Min">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Stepper.MaxProperty">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Stepper.Max">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Stepper.StepProperty">
+            <summary>
+            步长, 默认1
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Stepper.Step">
+            <summary>
+            步长, 默认1
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Stepper.ValueProperty">
+            <summary>
+            当前值, 默认0
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Stepper.Value">
+            <summary>
+            当前值
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Stepper.FormatProperty">
+            <summary>
+            显示格式
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Stepper.Format">
+            <summary>
+            显示格式
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Stepper.BorderColorProperty">
+            <summary>
+            线框颜色
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Stepper.BorderColor">
+            <summary>
+            线框颜色
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Stepper.TextColorProperty">
+            <summary>
+            线框颜色
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Stepper.TextColor">
+            <summary>
+            线框颜色
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.TabPageView">
+            <summary>
+            选项卡标签
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.TabView">
+            <summary>
+            选项卡
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabBarControlTemplateProperty">
+            <summary>
+            标签条的控件模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabBarControlTemplate">
+            <summary>
+            标签条的控件模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabTemplateProperty">
+            <summary>
+            标签头的数据模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabTemplate">
+            <summary>
+            标签头的数据模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabTemplateSelectorProperty">
+            <summary>
+            标签头模板选择器
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabTemplateSelector">
+            <summary>
+            标签头模板选择器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabControlTemplateProperty">
+            <summary>
+            标签头的控件模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabControlTemplate">
+            <summary>
+            标签头的控件模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.ItemTemplateProperty">
+            <summary>
+            标签页数据模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.ItemTemplate">
+            <summary>
+            标签页数据模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.ItemTemplateSelectorProperty">
+            <summary>
+            标签页模板选择器
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.ItemTemplateSelector">
+            <summary>
+            标签页模板选择器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.SelectedItemProperty">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.SelectedItem">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.SelectedIndexProperty">
+            <summary>
+            当前选中的序号
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.SelectedIndex">
+            <summary>
+            当前选中的序号
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabWidthRequestProperty">
+            <summary>
+            标签头宽度 默认80
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabWidthRequest">
+            <summary>
+            标签头宽度 默认80
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabHeightRequestProperty">
+            <summary>
+            标签头高度,默认40
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabHeightRequest">
+            <summary>
+            标签头高度,默认40
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabPositionProperty">
+            <summary>
+            标签条的位置,默认 Top
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabPosition">
+            <summary>
+            标签条的位置,默认 Top
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabBarBackgroundColorProperty">
+            <summary>
+            标签条的背景颜色,默认透明
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabBarBackgroundColor">
+            <summary>
+            标签条的背景颜色,默认透明
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TransitionTypeProperty">
+            <summary>
+            转场动画类型,默认 Fade
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TransitionType">
+            <summary>
+            转场动画类型,默认 Fade
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.Pages">
+            <summary>
+            使用 Pages 就不能使用 ItemsSource
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabSelectedCmd">
+            <summary>
+            标签头的 Tap 触发命令，内部使用，用于切换标签
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.TabPages">
+            <summary>
+            标签集合, View 即 TabPageView
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TabView.CurrentTabPage">
+            <summary>
+            当前选中的标签
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.PageContainer">
+            <summary>
+            子视图容器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabBarScroller">
+            <summary>
+            标签容器的父容器, 如果标签过多，可以滚
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabBarInner">
+            <summary>
+            内层标签容器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabView.TabBar">
+            <summary>
+            外层标签容器
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabView.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabView.GetTab(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsNum.XFControls.TabView.PrepareLayout">
+            <summary>
+            准备布局
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabView.UpdatePosition">
+            <summary>
+            更新标签、主体位置
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabView.UpdateTabPosition">
+            <summary>
+            更新标签位置
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabView.UpdateChildrenPosition">
+            <summary>
+            更新主体位置
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabView.WrapItemsSource">
+            <summary>
+            订阅数据源变化通知
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabViewPositions.Top">
+            <summary>
+            顶部
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabViewPositions.Bottom">
+            <summary>
+            底部
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabViewPositions.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabViewPositions.Right">
+            <summary>
+            右
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabViewTransitionTypes.None">
+            <summary>
+            无动画
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabViewTransitionTypes.Fade">
+            <summary>
+            淡入淡出
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.ISelectable">
+            <summary>
+            可选中数据接口, 用于 ViewModel 
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.ISelectable.IsSelected">
+            <summary>
+            是否已选中
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.ISelectable.SelectedCommand">
+            <summary>
+            选中时，触发该命令
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.ISelectable.UnSelectedCommand">
+            <summary>
+            取消选中时，触发该命令
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.ISelectable.NotifyOfPropertyChange(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="T:AsNum.XFControls.CornerRadiusConverter">
+            <summary>
+            CornerRadius 的 XAML 转换器
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.CornerRadius">
+            <summary>
+            圆角半径(左上右下)
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.DatePickerEx">
+            <summary>
+            DatePicker 扩展
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.DatePickerEx.PlaceHolderColorProperty">
+            <summary>
+            PlaceHolder 颜色
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.DatePickerEx.PlaceHolderProperty">
+            <summary>
+            PlaceHolder 颜色
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.DatePickerEx.FontSizeProperty">
+            <summary>
+            文本大小,默认 15
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.DatePickerEx.HorizontalTextAlignmentProperty">
+            <summary>
+            文本水平对齐
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DatePickerEx.PlaceHolderColor">
+            <summary>
+            PlaceHolder 颜色
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DatePickerEx.PlaceHolder">
+            <summary>
+            PlaceHolder
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DatePickerEx.FontSize">
+            <summary>
+            文本大小
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.DatePickerEx.HorizontalTextAlignment">
+            <summary>
+            文本水平对齐
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.Flip">
+            <summary>
+            左右滑动幻灯片
+            </summary>
+        </member>
+        <member name="E:AsNum.XFControls.Flip.NextRequired">
+            <summary>
+            下一侦
+            </summary>
+        </member>
+        <member name="E:AsNum.XFControls.Flip.IndexRequired">
+            <summary>
+            请求指定侦
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Flip.ItemsSourceProperty">
+            <summary>
+            源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Flip.ItemTemplateProperty">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.ItemTemplate">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Flip.AutoPlayProperty">
+            <summary>
+            是否自动播放
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.AutoPlay">
+            <summary>
+            是否自动播放
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Flip.IntervalProperty">
+            <summary>
+            播放间隔, 单位毫秒,默认2000
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.Interval">
+            <summary>
+            播放间隔, 单位毫秒,默认2000
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Flip.ShowIndicatorProperty">
+            <summary>
+            是否显示指示点
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.ShowIndicator">
+            <summary>
+            是否显示指示点
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Flip.CurrentProperty">
+            <summary>
+            当前侦序号,从0开始
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.Current">
+            <summary>
+            当前侦序号,从0开始
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.Index">
+            <summary>
+            从1开始,区别于 Current, 为了方便在界面上显示序号
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Flip.TotalPropertyKey">
+            <summary>
+            条目总数
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Flip.Total">
+            <summary>
+            条目总数,为了方便界面显示
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.Flip.WrapItemsSource">
+            <summary>
+            订阅数据源变化通知
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.Flip.GetChild(System.Object)">
+            <summary>
+            根据数据模板,生成子元素
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsNum.XFControls.FontIcon">
+            <summary>
+            Font 图标
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.FontIcon.FontFamilyProperty">
+            <summary>
+            字体名称, 字体需要放到平台项目下面
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.FontIcon.FontSizeProperty">
+            <summary>
+            文字大小,默认12
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.FontIcon.GlyphProperty">
+            <summary>
+            要显示的文本的代码
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.FontIcon.ColorProperty">
+            <summary>
+            文字颜色,默认 Black
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.FontIcon.DisableColorProperty">
+            <summary>
+            禁用状态下的文字颜色,默认Gray
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.FontIcon.TapCmdProperty">
+            <summary>
+            Tap 命令
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.FontIcon.TapCmdParamProperty">
+            <summary>
+            Tap 命令的参数
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.FontFamily">
+            <summary>
+            字体
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.FontSize">
+            <summary>
+            字体大小
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.Glyph">
+            <summary>
+            要显示的文本的代码
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.CurrentColor">
+            <summary>
+            当前使用颜色，在 Renderer 中使用
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.Color">
+            <summary>
+            文字颜色,默认 Black
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.DisableColor">
+            <summary>
+            禁用状态下的文字颜色,默认 Gray
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.TapCmd">
+            <summary>
+            Tap 命令
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.FontIcon.TapParam">
+            <summary>
+            Tap 命令参数
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.Helper.GetProperty(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="target"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsNum.XFControls.Helper.GetBytes(System.IO.Stream,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="stm"></param>
+            <param name="perCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsNum.XFControls.Marquee">
+            <summary>
+            跑马灯
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Marquee.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Marquee.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Marquee.ItemTemplateProperty">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Marquee.ItemTemplate">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Marquee.IntervalProperty">
+            <summary>
+            切换间隔, 单位毫秒,默认3000
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Marquee.Interval">
+            <summary>
+            切换间隔, 单位毫秒,默认3000
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Marquee.Current">
+            <summary>
+            当前序号
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Marquee.IsRunning">
+            <summary>
+            是否正在运行
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.Marquee.InsertChildren(System.Collections.IEnumerable,System.Int32)">
+            <summary>
+            数据源更新(插入)
+            </summary>
+            <param name="datas"></param>
+            <param name="startIdx"></param>
+        </member>
+        <member name="M:AsNum.XFControls.Marquee.RemoveChildren(System.Collections.IList,System.Int32)">
+            <summary>
+            数据源更新(删除)
+            </summary>
+            <param name="datas"></param>
+            <param name="startIdx"></param>
+        </member>
+        <member name="T:AsNum.XFControls.NotifyCollectionWrapper">
+            <summary>
+            如果数据源是 INotifyCollectionChanged , 则监听变化事件，否则执行 reset 命令
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.PickerEx">
+            <summary>
+            Picker 扩展,
+            XF 中的Picker没有数据源,数据只能是string的集合,不方便MVVM绑定
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.PickerEx.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.PickerEx.DefaultIndexProperty">
+            <summary>
+            默认选中的数据的序号
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.PickerEx.SelectedItemProperty">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.PickerEx.HorizontalTextAlignmentProperty">
+            <summary>
+            文本水平对齐
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.PickerEx.FontSizeProperty">
+            <summary>
+            文本大小
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.PickerEx.FontSize">
+            <summary>
+            文本大小
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.PickerEx.HorizontalTextAlignment">
+            <summary>
+            文本水平对齐
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.PickerEx.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.PickerEx.SelectedItem">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.PickerEx.DisplayMember">
+            <summary>
+            要显示的文本的属性路径
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.PickerEx.DefaultIndex">
+            <summary>
+            默认选中项序号
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.Radio">
+            <summary>
+            单选按钮(模拟)
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Radio.ValueProperty">
+            <summary>
+            单选项的值
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Radio.Value">
+            <summary>
+            单选项的值
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Radio.IsSelectedProperty">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.Radio.IsSelectedChanged(Xamarin.Forms.BindableObject,System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="bindable"></param>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="P:AsNum.XFControls.Radio.IsSelected">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Radio.TextProperty">
+            <summary>
+            标签文本
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Radio.Text">
+            <summary>
+            标签文本
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Radio.TextAlignmentProperty">
+            <summary>
+            标签文本的对齐方式
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Radio.TextAlignment">
+            <summary>
+            标签文本的对齐方式
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Radio.SizeProperty">
+            <summary>
+            单选按钮的大小, 对标签文本无效
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Radio.Size">
+            <summary>
+            单选按钮的大小, 对标签文本无效
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Radio.ShowRadioProperty">
+            <summary>
+            是否显示按钮图标(用于RadioButton)
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Radio.ShowRadio">
+            <summary>
+            是否显示按钮图标(用于RadioButton)
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.RadioButtonGroup">
+            <summary>
+            单选按钮(Button)组
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioButtonGroup.ShowRadioProperty">
+            <summary>
+            是否显示图标
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioButtonGroup.ShowRadio">
+            <summary>
+            是否显示图标
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.RadioGroup">
+            <summary>
+            单选按钮组
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroup.OrientationProperty">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroup.Orientation">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.RadioGroupBase">
+            <summary>
+            单选按钮组的基类
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroupBase.SelectedItemProperty">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroupBase.SelectedItem">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroupBase.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroupBase.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroupBase.DisplayPathProperty">
+            <summary>
+            要作为标签文本显示的属性路径
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroupBase.DisplayPath">
+            <summary>
+            要作为标签文本显示的属性路径
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroupBase.RadioSizeProperty">
+            <summary>
+            按钮大小,默认25
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroupBase.RadioSize">
+            <summary>
+            按钮大小,默认25
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroupBase.SelectedItemControlTemplateProperty">
+            <summary>
+            选中时的 ControlTemplate
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroupBase.SelectedItemControlTemplate">
+            <summary>
+            选中时的 ControlTemplate
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroupBase.UnSelectedItemControlTemplateProperty">
+            <summary>
+            未选中时的 ControlTemplate
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroupBase.UnSelectedItemControlTemplate">
+            <summary>
+            未选中时的 ControlTemplate
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.RadioGroupBase.SelectedCmd">
+            <summary>
+            内部使用的选中命令
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RadioGroupBase.SelectedRadio">
+            <summary>
+            当前选中的 Radio
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.RadioGroupBase.GetContainer">
+            <summary>
+            获取父容器,抽象方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AsNum.XFControls.Repeater">
+            <summary>
+            Repeater
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Repeater.ItemTemplateProperty">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Repeater.ItemTemplate">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Repeater.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Repeater.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Repeater.SelectedItemProperty">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Repeater.SelectedItem">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Repeater.ItemTapedCmdProperty">
+            <summary>
+            Tap 命令
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Repeater.ItemTapedCmd">
+            <summary>
+            Tap 命令
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Repeater.ItemTemplateSelectorProperty">
+            <summary>
+            模板选择器
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Repeater.ItemTemplateSelector">
+            <summary>
+            模板选择器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Repeater.OrientationProperty">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Repeater.Orientation">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.Repeater.GetChildView(System.Object)">
+            <summary>
+            从模板/模板选择器创建子视图
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="F:AsNum.XFControls.RepeaterOrientation.Vertical">
+            <summary>
+            垂直
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RepeaterOrientation.Horizontal">
+            <summary>
+            水平
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.RepeaterOrientation.HorizontalWrap">
+            <summary>
+            水平,自动换行
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.Segment">
+            <summary>
+            Segment 模拟
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Segment.IsMutliSelectableProperty">
+            <summary>
+            是否可多选
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Segment.IsMutliSelectable">
+            <summary>
+            是否可多选
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Segment.SelectedItemProperty">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Segment.SelectedItem">
+            <summary>
+            选中的数据
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Segment.SelectedItemsPropertyKey">
+            <summary>
+            选中的数据, 仅作用于 IsMutliSelectable = true
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Segment.SelectedItems">
+            <summary>
+            选中的数据, 仅作用于 IsMutliSelectable = true
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Segment.ItemTemplateProperty">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Segment.ItemTemplate">
+            <summary>
+            数据模板
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Segment.ItemsSourceProperty">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Segment.ItemsSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.Segment.SelectedItemBackgroundColorProperty">
+            <summary>
+            选中项的背景颜色
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.Segment.SelectedItemBackgroundColor">
+            <summary>
+            选中项的背景颜色
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.TabbedView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabbedView.ChildrenContainer">
+            <summary>
+            子视图容器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabbedView.TabScroller">
+            <summary>
+            标签容器的父容器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabbedView.TabInnerContainer">
+            <summary>
+            内层标签容器
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TabbedView.SelectedCmd">
+            <summary>
+            选中命令
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.PrepareLayout">
+            <summary>
+            布局
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.UpdateTabPosition">
+            <summary>
+            更新标签位置
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.UpdateChildrenPosition">
+            <summary>
+            更新主体位置
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.InitCollection(System.Collections.Specialized.INotifyCollectionChanged)">
+            <summary>
+            
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.UpdateChildren">
+            <summary>
+            更新子元素
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.UpdateTabs">
+            <summary>
+            更新标签
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.InsertChildren(System.Collections.IEnumerable,System.Int32)">
+            <summary>
+            数据源更新(插入)
+            </summary>
+            <param name="datas"></param>
+            <param name="startIdx"></param>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.RemoveChildren(System.Collections.IList,System.Int32)">
+            <summary>
+            数据源更新(删除)
+            </summary>
+            <param name="datas"></param>
+            <param name="startIdx"></param>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.GetChildView(System.Object)">
+            <summary>
+            从模板/模板选择器创建子视图
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.SetFade(Xamarin.Forms.View,System.Object)">
+            <summary>
+            设置淡入淡出
+            </summary>
+            <param name="view"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:AsNum.XFControls.TabbedView.GetTabView(System.Object)">
+            <summary>
+            从模板/模板选择器创建标签
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsNum.XFControls.TimePickerEx">
+            <summary>
+            时间选择器扩展版
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TimePickerEx.PlaceHolderColorProperty">
+            <summary>
+            占位文本颜色
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TimePickerEx.FontSizeProperty">
+            <summary>
+            文字大小,默认15
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.TimePickerEx.HorizontalTextAlignmentProperty">
+            <summary>
+            文本水平对齐
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.TimePickerEx.PlaceHolderColor">
+            <summary>
+            占位文本颜色
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.UniformGrid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.UniformGrid._ChildCount">
+            <summary>
+            上一次数据源的Item Count
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.UniformGrid.ColumnWidthProperty">
+            <summary>
+            列宽度，默认 Star, 即均分
+            </summary>
+        </member>
+        <member name="M:AsNum.XFControls.UniformGrid.GetChild(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsNum.XFControls.UniformGrid.WrapItemsSource">
+            <summary>
+            订阅数据源变化通知
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.WrapLayout">
+            <summary>
+            https://github.com/conceptdev/xamarin-forms-samples/blob/master/Evolve13/Evolve13/Controls/WrapLayout.cs
+            </summary>
+        </member>
+        <member name="F:AsNum.XFControls.WrapLayout.SpacingProperty">
+            <summary>
+            Backing Storage for the Spacing property
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.WrapLayout.Spacing">
+            <summary>
+            Spacing added between elements (both directions)
+            </summary>
+            <value>The spacing.</value>
+        </member>
+    </members>
+</doc>

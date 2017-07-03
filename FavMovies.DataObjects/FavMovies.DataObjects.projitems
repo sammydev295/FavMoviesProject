@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="SharedProjectFile_SccProperties">
+    <SharedProjectFile_ProjectGuid>{ea4f5cce-74ce-4e76-a5b0-7a3942e700d5}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_SccProjectName>SAK</SharedProjectFile_SccProjectName>
+    <SharedProjectFile_SccAuxPath>SAK</SharedProjectFile_SccAuxPath>
+    <SharedProjectFile_SccLocalPath>SAK</SharedProjectFile_SccLocalPath>
+    <SharedProjectFile_SccProvider>SAK</SharedProjectFile_SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>7baedd91-7375-4d1a-97aa-b21f1b741dde</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FavouriteMovies.DataObjects</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Favorite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Genre.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MovieBO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MenuItemBO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MovieVideoBO.cs" />
+  </ItemGroup>
+</Project>

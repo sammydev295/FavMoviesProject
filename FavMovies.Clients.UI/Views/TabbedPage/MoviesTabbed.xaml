@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tabbedPage="clr-namespace:FavMovies.Clients.UI.Views.TabbedPage;assembly=FavMovies.Clients.UI"
+             x:Class="FavMovies.Clients.UI.Views.TabbedPage.MoviesTabbed">
+    <TabbedPage.Children>
+        <tabbedPage:TopRatedMovies Title="Top Rated"/>
+        <tabbedPage:PopularMovies Title="Popular"/>
+        <tabbedPage:NowPlayingMovies Title="Now Playing"/>
+    </TabbedPage.Children>
+    <!--<TabbedPage.Children>
+        <ContentPage Title="Top Rated">
+            <Grid>
+                <controls:FlowListView x:Name="TopRatedList" SeparatorVisibility="None" HasUnevenRows="true"
+                                       FlowColumnMinWidth="110" FlowItemsSource="{Binding TopRatedList}"
+                                       IsVisible="{Binding ShowTopRated}" IsPullToRefreshEnabled="True"
+                                       RefreshCommand="{Binding ForceRefreshCommand}" IsRefreshing="{Binding IsBusy}"
+                                       BackgroundColor="#dfdfdf" Margin="5,0,5,0" 
+                                       FlowItemTapped="OnTopRatedSelected"  ItemAppearing="TopRatedList_OnItemAppearing" >
+                    <controls:FlowListView.FlowColumnTemplate>
+                        <cell:MovieCell/>
+                    </controls:FlowListView.FlowColumnTemplate>
+                    <controls:FlowListView.Footer>
+                        <ActivityIndicator IsVisible="{Binding ShowTopRatedBottomIndicator}" IsRunning="{Binding ShowTopRatedBottomIndicator}"
+                                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </controls:FlowListView.Footer>
+                </controls:FlowListView>
+
+                <ActivityIndicator IsVisible="{Binding ShowTopRatedIndicator}" IsRunning="{Binding ShowTopRatedIndicator}"
+                               HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+        </ContentPage>
+
+        <ContentPage Title="Popular">
+            <Grid>
+                <controls:FlowListView x:Name="PopularList" SeparatorVisibility="None" HasUnevenRows="true"
+                                   FlowColumnMinWidth="110" FlowItemsSource="{Binding PopularList}"
+                                   IsVisible="{Binding ShowPopular}" IsPullToRefreshEnabled="True"
+                                   RefreshCommand="{Binding ForceRefreshCommand}" IsRefreshing="{Binding IsBusy}"
+                                   BackgroundColor="#dfdfdf" Margin="5,0,5,0" 
+                                       FlowItemTapped="OnPopularSelected"  ItemAppearing="PopularList_OnItemAppearing">
+                    <controls:FlowListView.FlowColumnTemplate>
+                        <cell:MovieCell/>
+                    </controls:FlowListView.FlowColumnTemplate>
+                    <controls:FlowListView.Footer>
+                        <ActivityIndicator IsVisible="{Binding ShowPopularBottomIndicator}" IsRunning="{Binding ShowPopularBottomIndicator}"
+                                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </controls:FlowListView.Footer>
+                </controls:FlowListView>
+
+                <ActivityIndicator IsVisible="{Binding ShowPopularIndicator}" IsRunning="{Binding ShowPopularIndicator}"
+                               HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+        </ContentPage>
+
+        <ContentPage Title="Now Playing">
+            <Grid>
+                <controls:FlowListView x:Name="NowPlayingList" SeparatorVisibility="None" HasUnevenRows="true"
+                                   FlowColumnMinWidth="110" FlowItemsSource="{Binding NowPlayingList}"
+                                   IsVisible="{Binding ShowNowPlaying}" IsPullToRefreshEnabled="True"
+                                   RefreshCommand="{Binding ForceRefreshCommand}" IsRefreshing="{Binding IsBusy}"
+                                   BackgroundColor="#dfdfdf" Margin="5,0,5,0" 
+                                   FlowItemTapped="OnNowPlayingSelected" ItemAppearing="NowPlayingList_OnItemAppearing" >
+                    <controls:FlowListView.FlowColumnTemplate>
+                        <cell:MovieCell/>
+                    </controls:FlowListView.FlowColumnTemplate>
+                    <controls:FlowListView.Footer>
+                        <ActivityIndicator IsVisible="{Binding ShowNowPlayingBottomIndicator}" IsRunning="{Binding ShowNowPlayingBottomIndicator}"
+                                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </controls:FlowListView.Footer>
+                </controls:FlowListView>
+
+                <ActivityIndicator IsVisible="{Binding ShowNowPlayingIndicator}" IsRunning="{Binding ShowNowPlayingIndicator}"
+                               HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+        </ContentPage>
+    </TabbedPage.Children>-->
+</TabbedPage>

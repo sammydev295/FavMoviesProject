@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FavMovies.Views.MasterDetail"
+             xmlns:pages="clr-namespace:FavMovies.Views">
+  <MasterDetailPage.Master>
+        <ContentPage Title="Default" x:Name="Master">
+            <ContentPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="threelines.png" />
+            </ContentPage.Icon>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ListView Grid.Row="1" x:Name="PagesListView" HasUnevenRows="true"  
+                          SeparatorVisibility="None" SeparatorColor="Transparent"
+                          Margin="0,-4,0,0" ItemSelected="ListViewMenuItems_ItemSelected"
+                          BackgroundColor="AliceBlue">                  
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                                        <Image Source="{Binding Icon}" VerticalOptions="Center"
+                                         HeightRequest="20" WidthRequest="20" HorizontalOptions="Start"/>
+                                        <Label VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="Gray"
+                                         Text="{Binding Title}" FontSize="16"/>
+                                    </StackLayout>
+                                    <Label HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>                               
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>             
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>    
+    
+    <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+        <pages:Movies />
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

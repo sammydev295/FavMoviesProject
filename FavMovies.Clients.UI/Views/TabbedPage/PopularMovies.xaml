@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:cell="clr-namespace:FavMovies.Clients.UI.Cell;assembly=FavMovies.Clients.UI"
+             x:Class="FavMovies.Clients.UI.Views.TabbedPage.PopularMovies">
+    <Grid>
+        <controls:FlowListView x:Name="PopularList" SeparatorVisibility="None" HasUnevenRows="true"
+                               FlowColumnMinWidth="110" FlowItemsSource="{Binding PopularList}"
+                               IsVisible="{Binding ShowPopular}" IsPullToRefreshEnabled="True"
+                               RefreshCommand="{Binding ForceRefreshCommand}" IsRefreshing="{Binding IsBusy}"
+                               BackgroundColor="#dfdfdf" Margin="5,0,5,0" 
+                               FlowItemTapped="OnPopularSelected"  ItemAppearing="PopularList_OnItemAppearing">
+            <controls:FlowListView.FlowColumnTemplate>
+                <cell:MovieCell/>
+            </controls:FlowListView.FlowColumnTemplate>
+            <controls:FlowListView.Footer>
+                <ActivityIndicator IsVisible="{Binding ShowPopularBottomIndicator}" IsRunning="{Binding ShowPopularBottomIndicator}"
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </controls:FlowListView.Footer>
+        </controls:FlowListView>
+
+        <ActivityIndicator IsVisible="{Binding ShowPopularIndicator}" IsRunning="{Binding ShowPopularIndicator}"
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+    </Grid>
+</ContentPage>

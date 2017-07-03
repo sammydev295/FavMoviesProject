@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Refractored.XamForms.PullToRefresh.Droid</name>
+    </assembly>
+    <members>
+        <member name="T:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer">
+            <summary>
+            Pull to refresh layout renderer.
+            </summary>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.Init">
+            <summary>
+            Used for registration with dependency service
+            </summary>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer"/> class.
+            </summary>
+        </member>
+        <member name="E:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.ElementChanged">
+            <summary>
+            Occurs when element changed.
+            </summary>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.SetElement(Xamarin.Forms.VisualElement)">
+            <summary>
+            Setup our SwipeRefreshLayout and register for property changed notifications.
+            </summary>
+            <param name="element">Element.</param>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.UpdateContent">
+            <summary>
+            Managest adding and removing the android viewgroup to our actual swiperefreshlayout
+            </summary>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.RendererProperty">
+            <summary>
+            Gets the bindable property.
+            </summary>
+            <returns>The bindable property.</returns>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.Refreshing">
+            <summary>
+            Gets or sets a value indicating whether this
+            <see cref="T:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer"/> is refreshing.
+            </summary>
+            <value><c>true</c> if refreshing; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.CanChildScrollUp">
+            <summary>
+            Determines whether this instance can child scroll up.
+            We do this since the actual swipe refresh can't figure it out
+            </summary>
+            <returns><c>true</c> if this instance can child scroll up; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.RefreshView">
+            <summary>
+            Helpers to cast our element easily
+            Will throw an exception if the Element is not correct
+            </summary>
+            <value>The refresh view.</value>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.OnRefresh">
+            <summary>
+            The refresh view has been refreshed
+            </summary>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.HandlePropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the property changed.
+            Update the control and trigger refreshing
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.GetDesiredSize(System.Int32,System.Int32)">
+            <summary>
+            Gets the size of the desired.
+            </summary>
+            <returns>The desired size.</returns>
+            <param name="widthConstraint">Width constraint.</param>
+            <param name="heightConstraint">Height constraint.</param>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.UpdateLayout">
+            <summary>
+            Updates the layout.
+            </summary>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.Tracker">
+            <summary>
+            Gets the tracker.
+            </summary>
+            <value>The tracker.</value>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.ViewGroup">
+            <summary>
+            Gets the view group.
+            </summary>
+            <value>The view group.</value>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.Droid.PullToRefreshLayoutRenderer.Element">
+            <summary>
+            Gets the element.
+            </summary>
+            <value>The element.</value>
+        </member>
+    </members>
+</doc>

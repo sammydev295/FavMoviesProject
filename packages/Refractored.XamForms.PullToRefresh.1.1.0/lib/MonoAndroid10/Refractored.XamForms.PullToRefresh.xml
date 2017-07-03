@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Refractored.XamForms.PullToRefresh</name>
+    </assembly>
+    <members>
+        <member name="T:Refractored.XamForms.PullToRefresh.PullToRefreshLayout">
+            <summary>
+            Pull to refresh layout.
+            </summary>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Refractored.XamForms.PullToRefresh.PullToRefreshLayout"/> class.
+            </summary>
+        </member>
+        <member name="F:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.IsRefreshingProperty">
+            <summary>
+            The is refreshing property.
+            </summary>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.IsRefreshing">
+            <summary>
+            Gets or sets a value indicating whether this instance is refreshing.
+            </summary>
+            <value><c>true</c> if this instance is refreshing; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.IsPullToRefreshEnabledProperty">
+            <summary>
+            The is pull to refresh enabled property.
+            </summary>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.IsPullToRefreshEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is pull to refresh enabled.
+            </summary>
+            <value><c>true</c> if this instance is pull to refresh enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.RefreshCommandProperty">
+            <summary>
+            The refresh command property.
+            </summary>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.RefreshCommand">
+            <summary>
+            Gets or sets the refresh command.
+            </summary>
+            <value>The refresh command.</value>
+        </member>
+        <member name="F:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.RefreshColorProperty">
+            <summary>
+            Color property of refresh spinner color 
+            </summary>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.RefreshColor">
+            <summary>
+            Refresh  color
+            </summary>
+        </member>
+        <member name="F:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.RefreshBackgroundColorProperty">
+            <summary>
+            Color property of refresh background color
+            </summary>
+        </member>
+        <member name="P:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.RefreshBackgroundColor">
+            <summary>
+            Refresh background color
+            </summary>
+        </member>
+        <member name="M:Refractored.XamForms.PullToRefresh.PullToRefreshLayout.OnMeasure(System.Double,System.Double)">
+            <param name="widthConstraint">The available width for the element to use.</param>
+            <param name="heightConstraint">The available height for the element to use.</param>
+            <summary>
+            Optimization as we can get the size here of our content all in DIP
+            </summary>
+        </member>
+    </members>
+</doc>

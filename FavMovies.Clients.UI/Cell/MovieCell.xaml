@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataTemplate xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:card="clr-namespace:FavMovies.Clients.UI.CustomViews;assembly=FavMovies.Clients.UI"
+              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+              xmlns:xfControls="clr-namespace:AsNum.XFControls;assembly=AsNum.XFControls"
+              x:Class="FavMovies.Clients.UI.Cell.MovieCell">
+    <!--Custom Cell For Movies List-->
+    <xfControls:Border Stroke="White" StrokeThickness="1" BackgroundColor="Transparent">
+
+        <forms:CachedImage HeightRequest="150" Aspect="AspectFill" WidthRequest="100"
+                               DownsampleHeight="100" DownsampleUseDipUnits="false"
+                               LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+                               Source="{Binding PosterPath}"/>
+    </xfControls:Border>
+
+    <!--<card:CardView HasShadow="True" Padding="5,2,0,2" BackgroundColor="Transparent">
+
+        <forms:CachedImage HeightRequest="150" Aspect="AspectFill" WidthRequest="100"
+                               DownsampleHeight="100" DownsampleUseDipUnits="false"
+                               LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+                               Source="{Binding PosterPath}"/>
+
+    </card:CardView>-->
+</DataTemplate>

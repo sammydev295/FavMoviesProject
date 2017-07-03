@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:xf="clr-namespace:AsNum.XFControls;assembly=AsNum.XFControls"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:views="clr-namespace:FavMovies.Views;assembly=FavMovies.Clients.UI"
+                 xmlns:local="clr-namespace:FavMovies.Clients.UI;assembly=FavMovies.Clients.UI"
+                 xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                 x:Class="FavMovies.Views.MoviesDetail"
+                 Title="{Binding Name}" >
+    <pages:PopupPage.Animation>
+        <views:UserAnimation/>
+    </pages:PopupPage.Animation>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:RatingVisibleConverter x:Key="RatingVisibleConverter" />
+            <local:RatingConverter x:Key="RatingConverter" />
+            <local:IsFavoriteDetailTextConverter x:Key="IsFavoriteDetailTextConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" BackgroundColor="#555555">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1.25*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Movie Explorer" TextColor="Yellow" FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Image Source="close_thumbnail.png" HorizontalOptions="End" Margin="0,0,10,0"
+                   VerticalOptions="CenterAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CloseCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <Grid Grid.Row="1" Margin="15,0,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <xf:Border Grid.Column="0" Stroke="White" StrokeThickness="1">
+                    <forms:CachedImage Aspect="AspectFill" DownsampleHeight="100" DownsampleUseDipUnits="false"
+                                       LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+                                       Source="{Binding PosterPath}"/>
+                </xf:Border>
+                <StackLayout Grid.Column="1" Spacing="0">
+                    <Label Text="{Binding Title}" Font="18" FontAttributes="Bold" TextColor="White"/>
+                    <Label Text="{Binding ReleaseDate, StringFormat='Release Date: {0}'}" Font="12" TextColor="White"/>
+
+                    <xf:Repeater Orientation="Horizontal" ItemsSource="{Binding RatingCountList}" >
+                        <xf:Repeater.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding .}" HeightRequest="25" WidthRequest="25"
+                                       Aspect="AspectFit"/>
+                            </DataTemplate>
+                        </xf:Repeater.ItemTemplate>
+                    </xf:Repeater>
+                    <!--<Grid RowSpacing="18" HorizontalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                       
+                        --><!--<StackLayout Grid.Column="1" Orientation="Horizontal" Spacing="{StaticResource StandardSpacing}" HorizontalOptions="Center">
+                        <Grid x:Name="StarGrid" HeightRequest="24" WidthRequest="24">
+                          <Grid.Behaviors>
+                            -->
+                        <!--Do not remove name as it is used in binding-->
+                        <!--
+                            <local:StarBehavior x:Name="starOne" GroupName="myStar" IsStarred="{Binding Path=Popularity, Converter={StaticResource RatingConverter}, ConverterParameter=1}"/>
+                          </Grid.Behaviors>
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_outline.png}" />
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_selected.png}"
+                                  IsVisible="{Binding Source={x:Reference starOne}, Path=IsStarred}"/>
+                        </Grid>
+                        <Grid HeightRequest="24" WidthRequest="24" HorizontalOptions="Center">
+                          <Grid.Behaviors>
+                            -->
+                        <!--Do not remove name as it is used in binding-->
+                        <!--
+                            <local:StarBehavior x:Name="starTwo" GroupName="myStar" IsStarred="{Binding Path=Popularity, Converter={StaticResource RatingConverter}, ConverterParameter=2}"/>
+                          </Grid.Behaviors>
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_outline.png}" />
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_selected.png}"
+                                  IsVisible="{Binding Source={x:Reference starTwo}, Path=IsStarred}"/>
+                        </Grid>
+                        <Grid HeightRequest="24" WidthRequest="24" HorizontalOptions="Center">
+                          <Grid.Behaviors>
+                            -->
+                        <!--Do not remove name as it is used in binding-->
+                        <!--
+                            <local:StarBehavior x:Name="starThree" GroupName="myStar" IsStarred="{Binding Path=Popularity, Converter={StaticResource RatingConverter}, ConverterParameter=3}"/>
+                          </Grid.Behaviors>
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_outline.png}" />
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_selected.png}"
+                                  IsVisible="{Binding Source={x:Reference starThree}, Path=IsStarred}"/>
+                        </Grid>
+                        <Grid HeightRequest="24" WidthRequest="24" HorizontalOptions="Center">
+                          <Grid.Behaviors>
+                            -->
+                        <!--Do not remove name as it is used in binding-->
+                        <!--
+                            <local:StarBehavior x:Name="starFour" GroupName="myStar" IsStarred="{Binding Path=Popularity, Converter={StaticResource RatingConverter}, ConverterParameter=4}"/>
+                          </Grid.Behaviors>
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_outline.png}" />
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_selected.png}"
+                                  IsVisible="{Binding Source={x:Reference starFour}, Path=IsStarred}"/>
+                        </Grid>
+                        <Grid HeightRequest="24" WidthRequest="24" HorizontalOptions="Center">
+                          <Grid.Behaviors>
+                            -->
+                        <!--Do not remove name as it is used in binding-->
+                        <!--
+                            <local:StarBehavior x:Name="starFive" GroupName="myStar" IsStarred="{Binding Path=Popularity, Converter={StaticResource RatingConverter}, ConverterParameter=5}"/>
+                          </Grid.Behaviors>
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_outline.png}" />
+                          <Image Source="{local:ImageResource FavMovies.Clients.UI.Images.star_selected.png}"
+                                  IsVisible="{Binding Source={x:Reference starFive}, Path=IsStarred}"/>
+                        </Grid>
+                      </StackLayout>--><!--
+                    </Grid>-->
+
+                    <Label Text="{Binding Votes, StringFormat='from {0} votes'}" Font="12" TextColor="White"/>
+
+                    <StackLayout VerticalOptions="EndAndExpand">
+                        <Button Text="Play Video" BackgroundColor="#A3CA19" FontAttributes="Bold" WidthRequest="30" HeightRequest="40"
+                                TextColor="White" Margin="0,0,20,0" Command="{Binding PlayVideoCommand}"/>
+                        <Button Text="{Binding IsFavorite, Converter={StaticResource IsFavoriteDetailTextConverter}}" BackgroundColor="#DBB001" FontAttributes="Bold" WidthRequest="50" HeightRequest="40"
+                                TextColor="White" Command="{Binding SaveToFavCommand}"/>
+                    </StackLayout>
+                </StackLayout>
+
+            </Grid>
+
+            <ScrollView Grid.Row="2" Margin="15,0,15,0">
+                <Label Text="{Binding Overview}" TextColor="White" HorizontalOptions="FillAndExpand"/>
+            </ScrollView>
+            <StackLayout Grid.Row="3" Margin="15,0,15,0">
+                <Label Text="Similar Movies" TextColor="White" FontAttributes="Bold"/>
+                <ScrollView Orientation="Horizontal">
+                    <xf:Repeater Orientation="Horizontal" ItemsSource="{Binding SimilarMovies}"
+                         ItemTapedCmd="{Binding NavigateCommand}" SelectedItem="{Binding SelectedMovie}">
+                        <xf:Repeater.ItemTemplate>
+                            <DataTemplate>
+                                <xf:Border Stroke="White" StrokeThickness="1" >
+                                    <Image Source="{Binding PosterPath}" Aspect="AspectFit" />
+                                </xf:Border>
+                            </DataTemplate>
+                        </xf:Repeater.ItemTemplate>
+                    </xf:Repeater>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</pages:PopupPage>

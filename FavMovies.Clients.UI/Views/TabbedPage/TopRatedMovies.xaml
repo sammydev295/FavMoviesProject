@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:cell="clr-namespace:FavMovies.Clients.UI.Cell;assembly=FavMovies.Clients.UI"
+             x:Class="FavMovies.Clients.UI.Views.TabbedPage.TopRatedMovies">
+    <Grid>
+        <controls:FlowListView x:Name="TopRatedList" SeparatorVisibility="None" HasUnevenRows="true"
+                               FlowColumnMinWidth="110" FlowItemsSource="{Binding TopRatedList}"
+                               IsVisible="{Binding ShowTopRated}" IsPullToRefreshEnabled="True"
+                               RefreshCommand="{Binding ForceRefreshCommand}" IsRefreshing="{Binding IsBusy}"
+                               BackgroundColor="#dfdfdf" Margin="5,0,5,0" 
+                               FlowItemTapped="OnTopRatedSelected"  ItemAppearing="TopRatedList_OnItemAppearing" >
+            <controls:FlowListView.FlowColumnTemplate>
+                <cell:MovieCell/>
+            </controls:FlowListView.FlowColumnTemplate>
+            <controls:FlowListView.Footer>
+                <ActivityIndicator IsVisible="{Binding ShowTopRatedBottomIndicator}" IsRunning="{Binding ShowTopRatedBottomIndicator}"
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </controls:FlowListView.Footer>
+        </controls:FlowListView>
+
+        <ActivityIndicator IsVisible="{Binding ShowTopRatedIndicator}" IsRunning="{Binding ShowTopRatedIndicator}"
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FavMovies.Views.Movies"
+             xmlns:cell="clr-namespace:FavMovies.Clients.UI.Cell;assembly=FavMovies.Clients.UI"
+             xmlns:xf="clr-namespace:AsNum.XFControls;assembly=AsNum.XFControls"
+             xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+             Title="Movies">
+    <pullToRefresh:PullToRefreshLayout IsRefreshing="{Binding IsBusy}" RefreshCommand="{Binding ForceRefreshCommand}" 
+                                           IsPullToRefreshEnabled="True">
+        <Grid BackgroundColor="#555555">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+
+                <StackLayout  IsVisible="{Binding ShowTopRated}">
+                    <Label Text="Top Rated" TextColor="White" FontAttributes="Bold"/>
+                    <ScrollView Orientation="Horizontal"   Scrolled="TopRatedList_OnScrolled"> 
+                        <xf:Repeater Orientation="Horizontal" ItemsSource="{Binding TopRatedList}"
+                                     ItemTapedCmd="{Binding TopRatedCommand}" 
+                                     SelectedItem="{Binding TopRatedMovie}">
+                            <xf:Repeater.ItemTemplate>
+                              
+                                <cell:MovieCell/>
+                            </xf:Repeater.ItemTemplate>
+                        </xf:Repeater>
+                    </ScrollView>
+                </StackLayout>
+                <ActivityIndicator IsVisible="{Binding ShowTopRatedIndicator}" IsRunning="{Binding ShowTopRatedIndicator}"
+                                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+
+            <Grid Grid.Row="1">
+                <StackLayout IsVisible="{Binding ShowPopular}">
+                    <Label Text="Popular" TextColor="White" FontAttributes="Bold"/>
+                    <ScrollView Orientation="Horizontal" Scrolled="PopularList_OnScrolled">
+                        <xf:Repeater Orientation="Horizontal" ItemsSource="{Binding PopularList}"
+                                         ItemTapedCmd="{Binding PopularCommand}" SelectedItem="{Binding PopularMovie}">
+                            <xf:Repeater.ItemTemplate>
+                                <cell:MovieCell/>
+                            </xf:Repeater.ItemTemplate>
+                        </xf:Repeater>
+                    </ScrollView>
+                </StackLayout>
+                <ActivityIndicator IsVisible="{Binding ShowPopularIndicator}" IsRunning="{Binding ShowPopularIndicator}"
+                                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <StackLayout IsVisible="{Binding ShowNowPlaying}" >
+                    <Label Text="NowPlaying" TextColor="White" FontAttributes="Bold"/>
+                    <ScrollView Orientation="Horizontal" Scrolled="NowPlaying_OnScrolled">
+                        <xf:Repeater Orientation="Horizontal" ItemsSource="{Binding NowPlayingList}"
+                                         ItemTapedCmd="{Binding NowPlayingCommand}" SelectedItem="{Binding NowPlayingMovie}">
+                            <xf:Repeater.ItemTemplate>
+                                <cell:MovieCell/>
+                            </xf:Repeater.ItemTemplate>
+                        </xf:Repeater>
+                    </ScrollView>
+                </StackLayout>
+                <ActivityIndicator IsVisible="{Binding ShowNowPlayingIndicator}" IsRunning="{Binding ShowNowPlayingIndicator}"
+                                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+        </Grid>
+    </pullToRefresh:PullToRefreshLayout>
+</ContentPage>

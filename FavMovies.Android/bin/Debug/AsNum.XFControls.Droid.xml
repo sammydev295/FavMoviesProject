@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AsNum.XFControls.Droid</name>
+    </assembly>
+    <members>
+        <member name="M:AsNum.XFControls.Droid.CircleBoxRender.GetClip(System.Int32,System.Int32,Android.Graphics.Color)">
+            <summary>
+            http://stackoverflow.com/questions/16889815/canvas-clippath-only-works-on-android-emulator
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsNum.XFControls.Droid.DataPickerRender.UpdateApperance(Android.Graphics.Color,System.Single)">
+            <summary>
+            http://stackoverflow.com/questions/22962075/change-the-text-color-of-numberpicker
+            </summary>
+            <param name="numberPicker"></param>
+            <param name="txtColor"></param>
+            <param name="complexUnitType"></param>
+            <param name="textSize"></param>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsNum.XFControls.Droid.FlipViewAdapter.OnPageScrollStateChanged(System.Int32)">
+            <summary>
+            only occured by gesture
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:AsNum.XFControls.Droid.RatingBarRender.SetColor(System.Nullable{Android.Graphics.Color},System.Nullable{Android.Graphics.Color})">
+            <summary>
+            http://stackoverflow.com/questions/2446270/android-ratingbar-change-star-colors
+            </summary>
+            <param name="fColor"></param>
+            <param name="bColor"></param>
+        </member>
+    </members>
+</doc>

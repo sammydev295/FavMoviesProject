@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AsNum.XFControls.iOS</name>
+    </assembly>
+    <members>
+        <member name="M:AsNum.XFControls.iOS.CircleBoxRender.HandleStandardDraw(CoreGraphics.CGContext,System.Drawing.RectangleF,System.Action)">
+            <summary>
+            A simple method for handling our drawing of the shape. This method is called differently for each type of shape
+            </summary>
+            <param name="currentContext">Current context.</param>
+            <param name="rect">Rect.</param>
+            <param name="createPathForShape">Create path for shape.</param>
+        </member>
+        <member name="T:AsNum.XFControls.iOS.RatingBar">
+            <summary>
+            https://onevcat.com/2013/04/using-blending-in-ios/
+            https://github.com/saiwu-bigkoo/iOS-RatingBar
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.iOS.RatingBar.StarNum">
+            <summary>
+            星星数
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.iOS.RatingBar.WithAnimation">
+            <summary>
+            是否带动画
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.iOS.RatingBar.AnimationInterval">
+            <summary>
+            动画时长
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.iOS.RatingBar.Incomplete">
+            <summary>
+            评分时是否允许不是整颗星星
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.iOS.RatingBar.IsIndicator">
+            <summary>
+            是否仅显示
+            </summary>
+        </member>
+        <member name="P:AsNum.XFControls.iOS.RatingBar.Step">
+            <summary>
+            步长
+            </summary>
+        </member>
+        <member name="T:AsNum.XFControls.iOS.TapEffect">
+            <summary>
+            http://blog.csdn.net/iosweb/article/details/51555651
+            http://www.jianshu.com/p/f80ef6219d6b
+            http://www.cnblogs.com/wendingding/p/3800961.html
+            
+            动画
+            https://github.com/xamarin/ios-samples/blob/master/CustomPropertyAnimation/AppDelegate.cs
+            </summary>
+        </member>
+    </members>
+</doc>
